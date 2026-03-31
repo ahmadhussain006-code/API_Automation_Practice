@@ -1,0 +1,74 @@
+{
+  "info": {
+    "name": "AutomationExercise Login Negative Flow",
+    "_postman_id": "ae-login-negative-001",
+    "description": "API 8, API 9, API 10 for Automation Exercise",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "08 - Verify Login Without Email Parameter",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "password",
+              "value": "Test@123",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/verifyLogin",
+          "protocol": "https",
+          "host": ["automationexercise", "com"],
+          "path": ["api", "verifyLogin"]
+        }
+      }
+    },
+    {
+      "name": "09 - DELETE To Verify Login",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://automationexercise.com/api/verifyLogin",
+          "protocol": "https",
+          "host": ["automationexercise", "com"],
+          "path": ["api", "verifyLogin"]
+        }
+      }
+    },
+    {
+      "name": "10 - Verify Login With Invalid Details",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "email",
+              "value": "invalid_test_user@test.com",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "Invalid@123",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/verifyLogin",
+          "protocol": "https",
+          "host": ["automationexercise", "com"],
+          "path": ["api", "verifyLogin"]
+        }
+      }
+    }
+  ]
+}

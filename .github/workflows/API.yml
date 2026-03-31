@@ -1,4 +1,4 @@
-name: API Automation Tests
+name: API Login Negative Tests
 
 on:
   push:
@@ -27,12 +27,13 @@ jobs:
       - name: Create reports folder
         run: mkdir -p reports
 
-      - name: Run all API tests and generate HTML report
+      - name: Run login negative API tests
         run: |
-          pytest tests -v --capture=tee-sys --html=reports/report.html --self-contained-html
+          pytest tests/test_login_negative_flow.py -v --capture=tee-sys --html=reports/login_negative_report.html --self-contained-html
 
       - name: Upload HTML report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: API-Test-Report
-          path: reports/report.html
+          name: API-Login-Negative-Report
+          path: reports/login_negative_report.html
