@@ -1,0 +1,102 @@
+{
+  "info": {
+    "name": "AutomationExercise Products and Brands Flow",
+    "_postman_id": "ae-products-flow-001",
+    "description": "API 1 to API 6 for Automation Exercise",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "01 - Get All Products List",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://automationexercise.com/api/productsList",
+          "protocol": "https",
+          "host": ["automationexercise", "com"],
+          "path": ["api", "productsList"]
+        }
+      }
+    },
+    {
+      "name": "02 - POST To All Products List",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "https://automationexercise.com/api/productsList",
+          "protocol": "https",
+          "host": ["automationexercise", "com"],
+          "path": ["api", "productsList"]
+        }
+      }
+    },
+    {
+      "name": "03 - Get All Brands List",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://automationexercise.com/api/brandsList",
+          "protocol": "https",
+          "host": ["automationexercise", "com"],
+          "path": ["api", "brandsList"]
+        }
+      }
+    },
+    {
+      "name": "04 - PUT To All Brands List",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "https://automationexercise.com/api/brandsList",
+          "protocol": "https",
+          "host": ["automationexercise", "com"],
+          "path": ["api", "brandsList"]
+        }
+      }
+    },
+    {
+      "name": "05 - POST To Search Product",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "search_product",
+              "value": "top",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/searchProduct",
+          "protocol": "https",
+          "host": ["automationexercise", "com"],
+          "path": ["api", "searchProduct"]
+        }
+      }
+    },
+    {
+      "name": "06 - POST To Search Product Without Parameter",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/searchProduct",
+          "protocol": "https",
+          "host": ["automationexercise", "com"],
+          "path": ["api", "searchProduct"]
+        }
+      }
+    }
+  ]
+}
