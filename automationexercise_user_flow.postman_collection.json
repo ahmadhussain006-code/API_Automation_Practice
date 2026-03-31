@@ -1,0 +1,136 @@
+{
+  "info": {
+    "name": "AutomationExercise User Flow",
+    "_postman_id": "ae-user-flow-001",
+    "description": "Create user, verify login, get user details, update user, delete user",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "01 - Create User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            { "key": "name", "value": "Ahmad Hussain", "type": "text" },
+            { "key": "email", "value": "ahmad_test_10001@test.com", "type": "text" },
+            { "key": "password", "value": "Test@123", "type": "text" },
+            { "key": "title", "value": "Mr", "type": "text" },
+            { "key": "birth_date", "value": "24", "type": "text" },
+            { "key": "birth_month", "value": "11", "type": "text" },
+            { "key": "birth_year", "value": "1991", "type": "text" },
+            { "key": "firstname", "value": "Ahmad", "type": "text" },
+            { "key": "lastname", "value": "Hussain", "type": "text" },
+            { "key": "company", "value": "QA Company", "type": "text" },
+            { "key": "address1", "value": "Lucknow Street", "type": "text" },
+            { "key": "address2", "value": "UP", "type": "text" },
+            { "key": "country", "value": "India", "type": "text" },
+            { "key": "zipcode", "value": "226001", "type": "text" },
+            { "key": "state", "value": "UP", "type": "text" },
+            { "key": "city", "value": "Lucknow", "type": "text" },
+            { "key": "mobile_number", "value": "9999999999", "type": "text" }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/createAccount",
+          "protocol": "https",
+          "host": ["automationexercise", "com"],
+          "path": ["api", "createAccount"]
+        }
+      }
+    },
+    {
+      "name": "02 - Verify Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            { "key": "email", "value": "ahmad_test_10001@test.com", "type": "text" },
+            { "key": "password", "value": "Test@123", "type": "text" }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/verifyLogin",
+          "protocol": "https",
+          "host": ["automationexercise", "com"],
+          "path": ["api", "verifyLogin"]
+        }
+      }
+    },
+    {
+      "name": "03 - Get User Detail By Email",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://automationexercise.com/api/getUserDetailByEmail?email=ahmad_test_10001@test.com",
+          "protocol": "https",
+          "host": ["automationexercise", "com"],
+          "path": ["api", "getUserDetailByEmail"],
+          "query": [
+            { "key": "email", "value": "ahmad_test_10001@test.com" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "04 - Update User",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            { "key": "name", "value": "Ahmad Hussain Updated", "type": "text" },
+            { "key": "email", "value": "ahmad_test_10001@test.com", "type": "text" },
+            { "key": "password", "value": "Test@123", "type": "text" },
+            { "key": "title", "value": "Mr", "type": "text" },
+            { "key": "birth_date", "value": "24", "type": "text" },
+            { "key": "birth_month", "value": "11", "type": "text" },
+            { "key": "birth_year", "value": "1991", "type": "text" },
+            { "key": "firstname", "value": "Ahmad", "type": "text" },
+            { "key": "lastname", "value": "Hussain", "type": "text" },
+            { "key": "company", "value": "QA Company Updated", "type": "text" },
+            { "key": "address1", "value": "Updated Address", "type": "text" },
+            { "key": "address2", "value": "UP", "type": "text" },
+            { "key": "country", "value": "India", "type": "text" },
+            { "key": "zipcode", "value": "226001", "type": "text" },
+            { "key": "state", "value": "UP", "type": "text" },
+            { "key": "city", "value": "Lucknow", "type": "text" },
+            { "key": "mobile_number", "value": "9999999999", "type": "text" }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/updateAccount",
+          "protocol": "https",
+          "host": ["automationexercise", "com"],
+          "path": ["api", "updateAccount"]
+        }
+      }
+    },
+    {
+      "name": "05 - Delete User",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            { "key": "email", "value": "ahmad_test_10001@test.com", "type": "text" },
+            { "key": "password", "value": "Test@123", "type": "text" }
+          ]
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/deleteAccount",
+          "protocol": "https",
+          "host": ["automationexercise", "com"],
+          "path": ["api", "deleteAccount"]
+        }
+      }
+    }
+  ]
+}
