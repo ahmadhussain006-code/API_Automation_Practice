@@ -1,0 +1,4 @@
+# Force GitHub to show Python as main language
+*.py linguist-language=Python
+*.html linguist-documentation
+*.html linguist-detectable=false
